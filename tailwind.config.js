@@ -11,7 +11,8 @@ module.exports = {
       'off-white': '#f7f9fb',
       'rosy': '#f3e0dc',
       'blue-dark': "#021629",
-      'lilac': '#8d72a3'
+      'lilac': '#8d72a3',
+      'dark-grey': '#5b575e'
     },
    },
    plugins: [],

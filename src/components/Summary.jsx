@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 const Summary = () => {
     return (
-        <div className="summary-div" id="Summary">
+        <div className="summary-div" id="about">
            
-            <p className="p-20">
+            <p className="p-20 text-xl text-dark-grey">
                 In my technical and customer support career, I've honed my
                 skills in handling diverse clients and complex technical
                 challenges, emphasizing empathy, effective communication, and

@@ -6,7 +6,7 @@ import ContactForm from './components/ContactForm';
 
 function App() {
     return (
-        <div className='bg-rosy'>
+        <div className='bg-off-white'>
             <Navbar />
             <Summary />
             <Projects />
