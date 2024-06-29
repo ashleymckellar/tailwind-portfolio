@@ -8,9 +8,12 @@ const Projects = () => {
             className="py-20 my-20 flex flex-col items-center justify-center align-center "
             id="Projects"
         >
-            <h3 className="flex flex-wrap justify-center text-4xl text-dark-grey">
+            <h3 className="flex flex-wrap justify-center text-4xl text-lilac ">
                 A Few Accomplishments
             </h3>
+            <h2 className="text-2xl text-dark-grey py-10 font-bold">
+                Explore some of my deployed apps by clicking the links below
+            </h2>
             <div className="flex flex-wrap justify-center">
                 <article className="flex flex-col items-center justify-center w-full max-w-2xl bg-white py-10 rounded-md shadow-lg  bg-rosy m-10 p-10">
                     <a
@@ -24,7 +27,7 @@ const Projects = () => {
                         />
                     </a>
                     <div className="py-10 text-center">
-                        <h4 className='text-2xl text-dark-grey'>Sidhu Farms</h4>
+                        <h4 className="text-2xl text-dark-grey">Sidhu Farms</h4>
                         <p className="py-10 text-l text-dark-grey">
                             I partnered with another developer and project
                             manager to build the Sidhu Farms static site using
@@ -46,7 +49,9 @@ const Projects = () => {
                         />
                     </a>
                     <div className="py-10 text-center">
-                        <h4 className="text-2xl text-dark-grey">DJ Bentley Taylor</h4>
+                        <h4 className="text-2xl text-dark-grey">
+                            DJ Bentley Taylor
+                        </h4>
                         <p className="py-10 text-l text-dark-grey">
                             I collaborated with three developers to build a new
                             React-based site for DJ Bentley Taylor, where I
@@ -67,7 +72,9 @@ const Projects = () => {
                         />
                     </a>
                     <div className="py-10 text-center">
-                        <h4 className='text-2xl text-dark-grey'>Hot Sauce World</h4>
+                        <h4 className="text-2xl text-dark-grey">
+                            Hot Sauce World
+                        </h4>
                         <p className="py-10 text-l text-dark-grey">
                             Hot Sauce World is a hub for hot sauce enthusiasts.
                             This is a full stack application utilizing the

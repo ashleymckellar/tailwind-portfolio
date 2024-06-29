@@ -93,7 +93,9 @@ const ContactForm = () => {
 
     return (
         <div className="p-20 my-20 flex justify-center items-center bg-gray-100">
+            
             <div className="w-full max-w-2xl bg-white rounded-md shadow-lg bg-rosy m-10 p-10" id="Contact">
+                
                 <h3 className="text-2xl mb-4 text-center text-dark-grey">Contact me</h3>
                 <p className="mb-10 text-center text-dark-grey">Interested in working with me? Let's get in touch.</p>
                 <form onSubmit={sendEmail}>

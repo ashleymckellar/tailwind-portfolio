@@ -8,19 +8,12 @@ export default function Navbar() {
     const activeSection = useRef(null);
 
     return (
-        <nav className="flex flex-col items-center justify-center py-20">
-                <img
+        <nav className="flex flex-col justify-center ">
+            <img
                 src={skyline}
-                className="object-cover w-full h-auto max-w-7xl  max-h-96 rounded-md mb-10" ></img>
-            <div className="flex flex-col items-center text-center mb-10 py-20">
-                <h1 className="font-sans text-6xl  text-lilac  mb-6">
-                    Ashley McKellar
-                </h1>
-                <h3 className="text-3xl text-dark-grey font-bold">
-                    Software Developer
-                </h3>
-            </div>
-        
+                className="object-cover w-full h-auto max-w-screen-2xl  max-h-96 rounded-md mb-10"
+            ></img>
+
             <div className="block lg:hidden">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
@@ -51,35 +44,42 @@ export default function Navbar() {
                     isOpen ? 'block' : 'hidden'
                 }`}
             >
-                 <div className="text-xl lg:flex-grow space-x-8 space-y-8 text-center bg-gray-100 p-6 rounded-md flex space-around">
-                 <a
-                    
-                        href="about"
-                        
-                        className="block mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-gray-300 bg-lilac  rounded-md p-5 "
+                <div className="text-xl lg:flex-grow flex flex-col lg:flex-row items-center  space-y-4 lg:space-y-0 lg:space-x-8 text-center border-off-white p-6 rounded-md w-full">
+                    <a
+                        href="#"
+                        className="block w-full mt-4 lg:inline-block lg:mt-0  mr-4 text-off-white border border-off-white bg-lilac  rounded-md p-5 "
                     >
                         About
                     </a>
                     <a
                         href="#"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-gray-300 bg-lilac  rounded-md p-5"
+                        className="block w-full mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-off-white bg-lilac  rounded-md p-5"
                     >
                         Skills
                     </a>
                     <a
                         href="#"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-gray-300 bg-lilac  rounded-md p-5"
+                        className="block w-full mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-off-white bg-lilac  rounded-md p-5"
                     >
                         A Few Accomplishments
                     </a>
                     <a
                         href="#"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-gray-300 bg-lilac  rounded-md p-5"
+                        className="block w-full mt-4 lg:inline-block lg:mt-0 text-black-500 mr-4 text-off-white border border-off-white bg-lilac  rounded-md p-5"
                     >
                         Contact
                     </a>
                 </div>
+               
             </div>
+            <div className="flex flex-col items-center text-center mb-10 py-20">
+                    <h1 className="font-sans text-6xl  text-lilac  mb-6">
+                        Ashley McKellar
+                    </h1>
+                    <h3 className="text-3xl text-dark-grey font-bold">
+                        Software Developer
+                    </h3>
+                </div>
         </nav>
     );
 }
