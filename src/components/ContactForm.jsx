@@ -71,7 +71,10 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="p-4 sm:p-10 my-10 sm:my-20 flex flex-col justify-center items-center bg-gray-100" id="Contact">
+        <div
+            className="p-4 sm:p-10 my-10 sm:my-20 flex flex-col justify-center items-center bg-gray-100"
+            id="Contact"
+        >
             <h3 className="text-4xl mb-4 text-center text-lilac">Contact me</h3>
             <p className="text-lg sm:text-xl text-dark-grey px-4 sm:px-20 py-6 sm:py-10 text-center font-bold">
                 Interested in working with me? Let's get in touch.
@@ -81,7 +84,9 @@ const ContactForm = () => {
                 <Social />
                 <form onSubmit={sendEmail}>
                     <div className="mb-4">
-                        <p className="required-field text-red-500 text-sm sm:text-base text-dark-grey">* Required field</p>
+                        <p className="required-field text-red-500 text-sm sm:text-base text-dark-grey">
+                            * Required field
+                        </p>
                     </div>
                     <div className="mb-6">
                         <input
@@ -160,5 +165,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-

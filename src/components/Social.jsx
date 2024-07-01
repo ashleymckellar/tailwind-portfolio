@@ -9,34 +9,19 @@ const Social = () => {
                 href="https://github.com/ashleymckellar"
                 rel="noopener noreferrer"
             >
-                <img
-                    src={githubIcon}
-                    alt="GitHub"
-                    className=" size-12"
-                />
+                <img src={githubIcon} alt="GitHub" className=" size-12" />
             </a>
-            <div className="bg-lilac w-15 h-25">
-                <a
-                    href="mailto:ashley.l.mckellar@gmail.com"
-                    className="emailLink"
-                >
-                    <img
-                        src={emailIcon}
-                        alt="Email"
-                        className=" size-15"
-                    />
-                </a>
-            </div>
+
+            <a href="mailto:ashley.l.mckellar@gmail.com" className="emailLink">
+                <img src={emailIcon} alt="Email" className=" size-15" />
+            </a>
+
             <a
                 href="https://linkedin.com/in/ashley-mckellar"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img
-                    src={linkedInIcon}
-                    alt="LinkedIn"
-                    className=" size-15"
-                />
+                <img src={linkedInIcon} alt="LinkedIn" className=" size-15" />
             </a>
         </div>
     );
