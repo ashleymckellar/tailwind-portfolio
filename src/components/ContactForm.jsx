@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import FormModal from './FormModal';
+import Social from './Social';
 
 const ContactForm = () => {
     const [inputs, setInputs] = useState({
@@ -10,6 +11,7 @@ const ContactForm = () => {
         message: '',
     });
 
+    // eslint-disable-next-line no-unused-vars
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [requiredFieldError, setRequiredFieldError] = useState('');
 
@@ -56,19 +58,7 @@ const ContactForm = () => {
         setInputs({ name: '', email: '', subject: '', message: '' });
     };
 
-    const onRequiredBlur = (e) => {
-        const { name, value } = e.target;
-        console.log(name, value);
-        if (!isSubmitted) {
-            if (value === '') {
-                setRequiredFieldError(
-                    'Please enter a value in required fields.',
-                );
-            } else {
-                setRequiredFieldError('');
-            }
-        }
-    };
+
 
     const handleBlur = (e) => {
         const { name, value } = e.target;
@@ -92,12 +82,16 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="p-20 my-20 flex justify-center items-center bg-gray-100">
+        <div className="p-20 my-20 flex flex-col justify-center items-center bg-gray-100" id="Contact">
+            <h3 className="text-4xl mb-4 text-center text-lilac">Contact me</h3>
+            <p className="text-2xl text-dark-grey px-20 py-10 text-center font-bold">Interested in working with me? Let's get in touch.</p>
             
             <div className="w-full max-w-2xl bg-white rounded-md shadow-lg bg-rosy m-10 p-10" id="Contact">
+               
                 
-                <h3 className="text-2xl mb-4 text-center text-dark-grey">Contact me</h3>
-                <p className="mb-10 text-center text-dark-grey">Interested in working with me? Let's get in touch.</p>
+                
+                
+                <Social />
                 <form onSubmit={sendEmail}>
                     <div className="mb-4">
                         <p className="required-field text-red-500 text-dark-grey">* Required field</p>

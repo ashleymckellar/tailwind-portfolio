@@ -5,13 +5,13 @@ import HotSauce from '../assets/HotSauceWorld.png';
 const Projects = () => {
     return (
         <div
-            className="py-20 my-20 flex flex-col items-center justify-center align-center "
+            className="my-20 flex flex-col items-center justify-center "
             id="Projects"
         >
             <h3 className="flex flex-wrap justify-center text-4xl text-lilac ">
                 A Few Accomplishments
             </h3>
-            <h2 className="text-2xl text-dark-grey py-10 font-bold">
+            <h2 className="text-2xl text-dark-grey px-20 py-10 text-center font-bold">
                 Explore some of my deployed apps by clicking the links below
             </h2>
             <div className="flex flex-wrap justify-center">
