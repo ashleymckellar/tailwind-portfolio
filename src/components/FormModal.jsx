@@ -27,7 +27,7 @@ const FormModal = (props) => {
            
         >
             <div className="flex items-center justify-center align-center h-dvh overscroll-none">
-                <div className="place-items-center max-w-xl bg-rosy rounded-md shadow-lg p-10 z-10">
+                <div className="place-items-center max-w-xl bg-rosy rounded-md shadow-lg p-10">
                     <h2 className="text-2xl font-bold mb-4 text-center text-dark-grey ">Request Sent</h2>
                     <p className="text-lg text-center mb-6 text-dark-grey">
                         Your request was sent, and I'll get back to you as soon
