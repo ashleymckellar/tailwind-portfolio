@@ -1,7 +1,7 @@
 const Summary = () => {
     return (
-        <div id="about" className="flex justify-center px-4 sm:px-6 lg:px-15"> 
-            <p className="mb-20 text-lg sm:text-xl text-dark-grey text-center w-full max-w-7xl bg-white py-6 sm:py-10 rounded-md shadow-lg bg-rosy mx-4 sm:mx-6 lg:mx-10 px-20">
+        <div id="about" className="flex justify-center px-4 sm:px-6 lg:px-15 "> 
+            <p className="mb-20 text-2xl sm:text-2xl text-dark-grey text-center w-full max-w-7xl bg-white py-6 sm:py-10 rounded-md shadow-lg bg-rosy mx-4 sm:mx-6 lg:mx-10 px-20">
                 Hi, I'm Ashley. I'm a Seattle-area software developer
                 looking to make an impact on your team. With a background in
                 full-stack software development utilizing the MERN stack, I've

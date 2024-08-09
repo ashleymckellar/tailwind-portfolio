@@ -84,7 +84,7 @@ const ContactForm = () => {
                 <Social />
                 <form onSubmit={sendEmail}>
                     <div className="mb-4">
-                        <p className="required-field text-red-500 text-sm sm:text-base text-dark-grey">
+                        <p className="required-field text-red-500 text-md sm:text-base text-dark-grey">
                             * Required field
                         </p>
                     </div>

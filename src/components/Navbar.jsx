@@ -12,7 +12,7 @@ export default function Navbar() {
             <img
                 src={skyline}
                 className="object-cover w-full h-auto max-w-screen-3xl max-h-96 rounded-md mb-10"
-                alt="Skyline"
+                alt="Seattle skyline"
             />
 
             <div className="block lg:hidden">

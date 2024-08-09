@@ -20,7 +20,7 @@ const Projects = () => {
                     </a>
                     <div className="py-10 text-center">
                         <h4 className="text-2xl text-dark-grey">Sidhu Farms</h4>
-                        <p className="py-4 text-l text-dark-grey">
+                        <p className="py-4 text-xl text-dark-grey">
                             I partnered with another developer and project
                             manager to build the Sidhu Farms static site using
                             React. My key contributions included developing the
@@ -42,7 +42,7 @@ const Projects = () => {
                     </a>
                     <div className="py-10 text-center">
                         <h4 className="text-2xl text-dark-grey">DJ Bentley Taylor</h4>
-                        <p className="py-4 text-l text-dark-grey">
+                        <p className="py-4 text-xl text-dark-grey">
                             I collaborated with three developers to build a new
                             React-based site for DJ Bentley Taylor, where I
                             implemented a MixCloud music player, EmailJS-powered
@@ -63,7 +63,7 @@ const Projects = () => {
                     </a>
                     <div className="py-10 text-center">
                         <h4 className="text-2xl text-dark-grey">Hot Sauce World</h4>
-                        <p className="py-4 text-l text-dark-grey">
+                        <p className="py-4 text-xl text-dark-grey">
                             Hot Sauce World is a hub for hot sauce enthusiasts.
                             This is a full stack application utilizing the
                             following stack: React, NodeJS, API built with

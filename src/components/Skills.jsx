@@ -5,7 +5,7 @@ const Skills = () => {
 
             <div className="flex justify-center">
                 <div className="w-full max-w-7xl rounded-md shadow-lg bg-rosy m-4 sm:m-10 p-6 sm:p-10">
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center text-dark-grey text-lg sm:text-xl">
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center text-dark-grey text-2xl sm:text-2xl">
                         <li>HTML/CSS</li>
                         <li>Vanilla Javascript</li>
                         <li>Typescript</li>
