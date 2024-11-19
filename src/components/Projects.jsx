@@ -1,6 +1,7 @@
 import SidhuFarmsimg from '../assets/SidhuFarmsimg.png';
 import DJBentley from '../assets/djbentleyv2.png';
 import HotSauce from '../assets/HotSauceWorld.png';
+import HotSauce2 from '../assets/hotsauceworldsignin.png'
 
 const Projects = () => {
     return (
@@ -56,7 +57,7 @@ const Projects = () => {
                 <article className="flex flex-col items-center justify-center w-full max-w-2xl bg-white py-10 rounded-md shadow-lg bg-rosy m-4 p-6 md:m-10 md:p-10">
                     <a href="https://hotsauce-world.com">
                         <img
-                            src={HotSauce}
+                            src={HotSauce2}
                             alt=""
                             className="mx-auto w-full h-80 object-cover md:w-150"
                         />
