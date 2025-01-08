@@ -2,6 +2,7 @@ import SidhuFarmsimg from '../assets/SidhuFarmsimg.png';
 import DJBentley from '../assets/djbentleyv2.png';
 import HotSauce from '../assets/HotSauceWorld.png';
 import HotSauce2 from '../assets/hotsauceworldsignin.png'
+import bII from '../assets/BIIthumbnail.png'
 
 const Projects = () => {
     return (
@@ -12,7 +13,8 @@ const Projects = () => {
             </h2>
             <div className="flex flex-wrap justify-center">
                 <article className="flex flex-col items-center justify-center w-full max-w-2xl bg-white py-10 rounded-md shadow-lg bg-rosy m-4 p-6 md:m-10 md:p-10">
-                    <a href="https://sidhu-farms1.vercel.app/" className="image">
+                    <a href="https://sidhu-farms1.vercel.app/" className="image"   target="_blank"
+                                        rel="noopener noreferrer">
                         <img
                             src={SidhuFarmsimg}
                             alt=""
@@ -34,7 +36,8 @@ const Projects = () => {
                     </div>
                 </article>
                 <article className="flex flex-col items-center justify-center w-full max-w-2xl bg-white py-10 rounded-md shadow-lg bg-rosy m-4 p-6 md:m-10 md:p-10">
-                    <a href="https://www.djbentleytaylor.com/">
+                    <a href="https://www.djbentleytaylor.com/"   target="_blank"
+                                        rel="noopener noreferrer">
                         <img
                             src={DJBentley}
                             alt=""
@@ -55,23 +58,18 @@ const Projects = () => {
                     </div>
                 </article>
                 <article className="flex flex-col items-center justify-center w-full max-w-2xl bg-white py-10 rounded-md shadow-lg bg-rosy m-4 p-6 md:m-10 md:p-10">
-                    <a href="https://hotsauce-world.com">
+                    <a href="https://brain-integration-institute.onrender.com/"   target="_blank"
+                                        rel="noopener noreferrer">
                         <img
-                            src={HotSauce2}
+                            src={bII}
                             alt=""
                             className="mx-auto w-full h-80 object-cover md:w-150"
                         />
                     </a>
                     <div className="py-10 text-center">
-                        <h4 className="text-2xl text-dark-grey">Hot Sauce World</h4>
+                        <h4 className="text-2xl text-dark-grey">Brain Integration Institute</h4>
                         <p className="py-4 text-xl text-dark-grey">
-                            Hot Sauce World is a hub for hot sauce enthusiasts.
-                            This is a full stack application utilizing the
-                            following stack: React, NodeJS, API built with
-                            MongoDB, and authentication using Bcrypt and JWT.
-                            This site has been deployed on Heroku with a custom
-                            domain. It's also utilizing HTTPS using an SSL
-                            certificate provided by Let's Encrypt.
+                        This full-stack web application, built for a client with the MERN stack (MongoDB/Mongoose, Express, React, Node.js), offers robust features like secure authentication with Auth0, file hosting via Cloudinary, and payment integration using Stripe. It includes email push notifications powered by Nodemailer, an admin panel with real-time notifications, user notifications, and a custom timed testing platform. Deployed on Render with a TLS certificate, the app delivers a seamless and secure user experience with dynamic data handling, file uploads, and advanced functionality.
                         </p>
                     </div>
                 </article>
