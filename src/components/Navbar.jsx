@@ -1,96 +1,133 @@
-
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import skyline from '../assets/skyline.jpeg';
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 100) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <nav className="flex flex-col justify-center">
-            <img
-                src={skyline}
-                className="object-cover w-full h-auto max-w-screen-3xl max-h-96 rounded-md mb-10"
-                alt="Seattle skyline"
-            />
-
-            <div className="block lg:hidden">
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
-                >
-                    <svg
-                        className={`fill-current h-6 w-6 fill-lilac ${isOpen ? 'hidden' : 'block'}`}
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                    <svg
-                        className={`fill-current h-6 w-6 fill-lilac ${isOpen ? 'block' : 'hidden'}`}
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                    </svg>
-                </button>
-            </div>
-            <div
-                className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? 'block' : 'hidden'}`}
-            >
-                <div className="text-xl lg:flex-grow flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 text-center border-off-white p-6 rounded-md w-full">
-                    <Link
-                        activeClass="active"
-                        to="about"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={600}
-                        className="block w-full mt-4 lg:inline-block lg:mt-0 mr-4 text-off-white border border-off-white bg-lilac rounded-md p-5 cursor-pointer"
-                    >
-                        About
-                    </Link>
-                    <Link
-                        activeClass="active"
-                        to="Skills"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={600}
-                        className="block w-full mt-4 lg:inline-block lg:mt-0 mr-4 text-off-white border border-off-white bg-lilac rounded-md p-5 cursor-pointer"
-                    >
-                        Skills
-                    </Link>
-                    <Link
-                        activeClass="active"
-                        to="Projects"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={600}
-                        className="block w-full mt-4 lg:inline-block lg:mt-0 mr-4 text-off-white border border-off-white bg-lilac rounded-md p-5 cursor-pointer"
-                    >
-                        A Few Accomplishments
-                    </Link>
-                    <Link
-                        activeClass="active"
-                        to="Contact"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={600}
-                        className="block w-full mt-4 lg:inline-block lg:mt-0 mr-4 text-off-white border border-off-white bg-lilac rounded-md p-5 cursor-pointer"
-                    >
-                        Contact
-                    </Link>
+        <header className="w-full relative">
+            {/* Hero Section with Image and Name */}
+            <div className="relative">
+                <img
+                    src={skyline}
+                    className="object-cover w-full h-[500px] brightness-90"
+                    alt="Seattle skyline"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 flex flex-col items-center justify-end pb-16">
+                    <h1 className="font-sans text-6xl text-[#FFFFFF] font-bold mb-4 drop-shadow-lg">Ashley McKellar</h1>
+                    <h3 className="text-3xl text-[#FFFFFF] font-medium drop-shadow-lg">Software Developer</h3>
                 </div>
             </div>
-            <div className="flex flex-col items-center text-center mb-10 py-10">
-                <h1 className="font-sans text-6xl text-lilac mb-6">Ashley McKellar</h1>
-                <h3 className="text-3xl text-dark-grey font-bold">Software Developer</h3>
-            </div>
-        </nav>
+
+            {/* Navigation Bar - Fixed on scroll */}
+            <nav className={`${scrolled ? 'fixed top-0 shadow-lg bg-white/95 backdrop-blur-sm' : 'bg-white'} w-full z-50 transition-all duration-300 py-4`}>
+                <div className="container mx-auto px-4 flex justify-between items-center">
+                    {/* Logo/Name when scrolled */}
+                    <div className={`${scrolled ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                        <span className="text-lilac font-bold text-xl">AM</span>
+                    </div>
+
+                    {/* Mobile menu button */}
+                    <div className="block lg:hidden">
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="flex items-center p-2 rounded-md hover:bg-gray-100 transition-colors"
+                            aria-label="Toggle menu"
+                        >
+                            <svg
+                                className={`fill-lilac h-6 w-6 ${isOpen ? 'hidden' : 'block'}`}
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                            </svg>
+                            <svg
+                                className={`fill-lilac h-6 w-6 ${isOpen ? 'block' : 'hidden'}`}
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    {/* Desktop Navigation Links */}
+                    <div className="hidden lg:flex space-x-8">
+                        <NavLink to="about" label="About" />
+                        <NavLink to="Skills" label="Skills" />
+                        <NavLink to="Projects" label="Projects" />
+                        <NavLink to="Contact" label="Contact" />
+                    </div>
+                </div>
+
+                {/* Mobile Navigation Menu */}
+                <div
+                    className={`lg:hidden transition-all duration-300 overflow-hidden ${
+                        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                >
+                    <div className="px-4 py-2 space-y-3 flex flex-col">
+                        <MobileNavLink to="about" label="About" onClick={() => setIsOpen(false)} />
+                        <MobileNavLink to="Skills" label="Skills" onClick={() => setIsOpen(false)} />
+                        <MobileNavLink to="Projects" label="Projects" onClick={() => setIsOpen(false)} />
+                        <MobileNavLink to="Contact" label="Contact" onClick={() => setIsOpen(false)} />
+                    </div>
+                </div>
+            </nav>
+        </header>
     );
 }
 
+
+function NavLink({ to, label }) {
+    return (
+        <Link
+            activeClass="text-lilac font-medium"
+            to={to}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={600}
+            className="text-gray-700 hover:text-lilac transition-colors py-2 px-1 border-b-2 border-transparent hover:border-lilac cursor-pointer"
+        >
+            {label}
+        </Link>
+    );
+}
+
+// Component for mobile navigation links
+function MobileNavLink({ to, label, onClick }) {
+    return (
+        <Link
+            activeClass="bg-lilac/10 text-lilac"
+            to={to}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={600}
+            className="py-3 px-4 rounded-md text-gray-700 hover:bg-lilac/10 hover:text-lilac transition-colors cursor-pointer"
+            onClick={onClick}
+        >
+            {label}
+        </Link>
+    );
+}
