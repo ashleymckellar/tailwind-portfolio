@@ -106,7 +106,7 @@ const ContactForm = () => {
         setShowModal(false);
     };
 
-    // Input field component for reusability
+  
     const InputField = ({ type, name, icon, placeholder, value, multiline = false, required = false }) => (
         <div className={`mb-6 relative group ${focused === name ? 'focused' : ''}`}>
             <div className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 group-hover:shadow-md">
@@ -201,38 +201,41 @@ const ContactForm = () => {
                         <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
                         
                         <form onSubmit={sendEmail}>
-                            <InputField 
+                            <input 
                                 type="text"
                                 name="name"
                                 icon={<User size={20} />}
                                 placeholder="Your Name *"
                                 value={inputs.name}
                                 required={true}
+                                  onChange={handleChange}
                             />
                             
-                            <InputField 
+                            <input 
                                 type="email"
                                 name="email"
                                 icon={<Mail size={20} />}
                                 placeholder="Your Email *"
                                 value={inputs.email}
                                 required={true}
+                                  onChange={handleChange}
                             />
                             
-                            <InputField 
+                            <input 
                                 type="text"
                                 name="subject"
                                 icon={<FileText size={20} />}
                                 placeholder="Subject (Optional)"
                                 value={inputs.subject}
+                                  onChange={handleChange}
                             />
                             
-                            <InputField 
+                            <input 
                                 name="message"
                                 icon={<MessageSquare size={20} />}
                                 placeholder="Your Message *"
                                 value={inputs.message}
-                                multiline={true}
+                              onChange={handleChange}
                                 required={true}
                             />
                             

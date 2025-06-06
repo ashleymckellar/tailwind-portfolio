@@ -20,10 +20,29 @@ const FormModal = (props) => {
             isOpen={show}
             onRequestClose={handleClose}
             contentLabel="Form Modal"
+                style={{
+        overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 50,
+        },
+        content: {
+            position: 'absolute',
+            top: '20%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, 0)',
+            borderRadius: '8px',
+            padding: '2rem',
+            maxWidth: '400px',
+            background: '#fff',
+        },
+    }}
             className="custom-modal"
         >
             <div className="flex items-center justify-center align-center h-dvh overscroll-none">
-                <div className="place-items-center max-w-xl bg-rosy rounded-md shadow-lg p-10">
+                <div className="place-items-center max-w-xl rounded-md shadow-lg p-10">
                     <h2 className="text-2xl font-bold mb-4 text-center text-dark-grey ">
                         Request Sent
                     </h2>
