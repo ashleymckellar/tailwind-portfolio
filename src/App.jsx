@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 
 function App() {
     return (
-        <div className="bg-off-white">
+        <div className="bg-off-white overflow-x-hidden">
             <Navbar />
             <Summary />
             <Skills />
