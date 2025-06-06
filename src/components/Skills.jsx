@@ -163,6 +163,7 @@ const Skills = () => {
     const CategoryButton = ({ category, icon, title, isSelected }) => (
         <button
             onClick={() => setSelectedCategory(category)}
+            onMouseEnter={() => setSelectedCategory(category)}
             className={`
                 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
                 flex items-center space-x-2 shadow-sm

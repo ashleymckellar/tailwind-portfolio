@@ -194,13 +194,16 @@ const ContactForm = () => {
                     </div>
                     
                     {/* Contact Form */}
-                    <div className="md:col-span-3 bg-white rounded-2xl shadow-lg p-8 relative">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-lavender-light rounded-bl-full -z-10 opacity-50" />
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-rose-light rounded-tr-full -z-10 opacity-50" />
+                    <div className="md:col-span-3 bg-white relative flex flex-col items-center bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 group-hover:shadow-md">
+                        <div className="absolute top-0 right-0  bg-lavender-light rounded-bl-full -z-10 opacity-50" />
+                        <div className="absolute bottom-0 left-0 bg-rose-light rounded-tr-full -z-10 opacity-50" />
                         
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
-                        
-                        <form onSubmit={sendEmail}>
+                    <div className="w-full h-24 bg-gradient-to-r from-lavender-deep to-rose-deep flex items-center justify-center">
+    <h3 className="text-2xl font-semibold text-white">Send Me a Message</h3>
+</div>
+
+                        <div className='flex py-2'>
+                    <form onSubmit={sendEmail} className="flex flex-col space-y-4 w-full mt-4">
                             <input 
                                 type="text"
                                 name="name"
@@ -209,6 +212,8 @@ const ContactForm = () => {
                                 value={inputs.name}
                                 required={true}
                                   onChange={handleChange}
+                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-deep focus:border-lavender-deep transition-all duration-300"
+
                             />
                             
                             <input 
@@ -219,6 +224,8 @@ const ContactForm = () => {
                                 value={inputs.email}
                                 required={true}
                                   onChange={handleChange}
+                                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-deep focus:border-lavender-deep transition-all duration-300"
+
                             />
                             
                             <input 
@@ -228,6 +235,8 @@ const ContactForm = () => {
                                 placeholder="Subject (Optional)"
                                 value={inputs.subject}
                                   onChange={handleChange}
+                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-deep focus:border-lavender-deep transition-all duration-300"
+
                             />
                             
                             <input 
@@ -237,6 +246,8 @@ const ContactForm = () => {
                                 value={inputs.message}
                               onChange={handleChange}
                                 required={true}
+                               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-deep focus:border-lavender-deep transition-all duration-300"
+
                             />
                             
                             {requiredFieldError && (
@@ -252,7 +263,7 @@ const ContactForm = () => {
                                         group relative overflow-hidden rounded-lg px-6 py-3 
                                         font-medium transition-all duration-300
                                         ${isDisabled 
-                                            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                                            ? 'bg-gray text-gray cursor-not-allowed'
                                             : 'bg-gradient-to-r from-lavender-deep to-rose-deep text-white shadow-md hover:shadow-lg transform hover:-translate-y-1'
                                         }
                                     `}
@@ -265,6 +276,7 @@ const ContactForm = () => {
                                 </button>
                             </div>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -4,24 +4,24 @@ import { Link } from 'react-scroll';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    // const [scrolled, setScrolled] = useState(false);
 
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const offset = window.scrollY;
-            if (offset > 100) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const offset = window.scrollY;
+    //         if (offset > 100) {
+    //             setScrolled(true);
+    //         } else {
+    //             setScrolled(false);
+    //         }
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     return (
         <header className="w-full relative">
@@ -39,10 +39,11 @@ export default function Navbar() {
             </div>
 
             {/* Navigation Bar - Fixed on scroll */}
-            <nav className={`${scrolled ? 'fixed top-0 shadow-lg bg-white/95 backdrop-blur-sm' : 'bg-white'} w-full z-50 transition-all duration-300 py-4`}>
+          <nav className="fixed top-0 shadow-lg bg-[#FFFFFF] w-full z-50 transition-all duration-300 py-4">
+
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     {/* Logo/Name when scrolled */}
-                    <div className={`${scrolled ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                    <div >
                         <span className="text-lilac font-bold text-xl">AM</span>
                     </div>
 
