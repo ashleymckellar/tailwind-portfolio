@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import skyline from '../assets/skyline.jpeg';
-import beach from '../assets/pensacola-beach.jpg'
+import beach from '../assets/pexels-asadphoto457881.jpg'
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
