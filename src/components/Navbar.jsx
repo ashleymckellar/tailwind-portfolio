@@ -33,8 +33,8 @@ export default function Navbar() {
                     alt="Pensacola Beach"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 flex flex-col items-center justify-end pb-16">
-                    <h1 className="font-sans text-6xl text-[#FFFFFF] font-bold mb-4 drop-shadow-lg">Ashley McKellar</h1>
-                    <h3 className="text-3xl text-[#FFFFFF] font-medium drop-shadow-lg">Software Developer</h3>
+                    <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl text-[#FFFFFF] font-bold mb-4 drop-shadow-lg">Ashley McKellar</h1>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl text-[#FFFFFF] font-medium drop-shadow-lg">Software Developer</h3>
                 </div>
             </div>
 
