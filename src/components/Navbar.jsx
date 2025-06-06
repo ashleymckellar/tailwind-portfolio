@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import skyline from '../assets/skyline.jpeg';
+import beach from '../assets/pensacola-beach.jpg'
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
@@ -28,9 +29,9 @@ export default function Navbar() {
             {/* Hero Section with Image and Name */}
             <div className="relative">
                 <img
-                    src={skyline}
+                    src={beach}
                     className="object-cover w-full h-[500px] brightness-90"
-                    alt="Seattle skyline"
+                    alt="Pensacola Beach"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 flex flex-col items-center justify-end pb-16">
                     <h1 className="font-sans text-6xl text-[#FFFFFF] font-bold mb-4 drop-shadow-lg">Ashley McKellar</h1>

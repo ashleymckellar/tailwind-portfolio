@@ -33,7 +33,7 @@ const Summary = () => {
 
               
                             <p className="text-xl sm:text-2xl text-dark-grey/90 text-center leading-relaxed">
-                                I'm a Seattle-area software developer passionate about creating impactful solutions. 
+                                I'm a Pensacola-area software developer passionate about creating impactful solutions. 
                                 As a full-stack developer, I specialize in building robust applications that solve real-world problems.
                             </p>
 
