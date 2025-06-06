@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import SidhuFarmsimg from '../assets/SidhuFarmsimg.png';
 import DJBentley from '../assets/djbentleyv2.png';
-import bII from '../assets/BIIthumbnail.png';
+import bII from '../assets/BII-new-thumb.png';
 
 const Projects = () => {
     const [activeProject, setActiveProject] = useState(null);
