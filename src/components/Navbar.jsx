@@ -29,10 +29,10 @@ export default function Navbar() {
             <div className="relative">
                 <img
                     src={beach}
-                    className="object-cover w-full h-[500px] brightness-90"
+                    className="object-cover w-full h-[350px] sm:h-[400px] md:h-[500px] brightness-90"
                     alt="Pensacola Beach"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 flex flex-col items-center justify-end pb-16">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 flex flex-col items-center justify-end pb-12 sm:pb-14 md:pb-16">
                     <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl text-[#FFFFFF] font-bold mb-4 drop-shadow-lg">Ashley McKellar</h1>
                     <h3 className="text-xl sm:text-2xl md:text-3xl text-[#FFFFFF] font-medium drop-shadow-lg">Software Developer</h3>
                 </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
                         </button>
                     </div>
 
-                    {/* Desktop Navigation Links */}
+          
                     <div className="hidden lg:flex space-x-8">
                         <NavLink to="about" label="About" />
                         <NavLink to="Skills" label="Skills" />
@@ -80,7 +80,7 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                {/* Mobile Navigation Menu */}
+
                 <div
                     className={`lg:hidden transition-all duration-300 overflow-hidden ${
                         isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'

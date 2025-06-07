@@ -64,7 +64,7 @@ const Projects = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-lilac mb-6 relative inline-block">
                         A Few Accomplishments
-                        <span className="absolute bottom-0 left-0 w-full h-1 bg-lilac opacity-30 rounded"></span>
+                        {/* <span className="absolute bottom-0 left-0 w-full h-1 bg-lilac opacity-30 rounded"></span> */}
                     </h2>
                     <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                         Explore some of my deployed applications that showcase my skills and expertise in web development
@@ -83,7 +83,7 @@ const Projects = () => {
                             <div className={`
                                 relative overflow-hidden rounded-xl shadow-lg 
                                 bg-gradient-to-br from-white to-gray-50
-                                border border-gray-200
+                                
                                 transition-all duration-500 ease-in-out
                                 ${activeProject === project.id ? 'scale-[1.02] shadow-xl' : ''}
                             `}>
@@ -96,17 +96,18 @@ const Projects = () => {
                                             alt={project.title}
                                             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                         />
-                                        <div className={`
-                                            absolute inset-0 bg-gradient-to-t from-black/50 to-transparent 
-                                            flex items-end p-6 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity
-                                        `}>
-                                            <h3 className="text-white text-2xl font-bold lg:hidden">{project.title}</h3>
-                                        </div>
+                                      <div className={`
+    absolute inset-0 bg-gradient-to-t from-black/50 to-transparent 
+    flex items-end p-6 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity
+`}>
+    <h3 className="text-white text-2xl font-bold hidden sm:block">{project.title}</h3>
+</div>
+
                                     </div>
                                     
                                     {/* Project Content */}
                                     <div className="lg:w-3/5 p-6 lg:p-8">
-                                        <h3 className="text-2xl font-bold text-gray-800 mb-4 hidden lg:block">{project.title}</h3>
+                                        <h3 className="text-2xl font-bold text-gray-800 mb-4 ">{project.title}</h3>
                                         
                                         <div className="mb-6">
                                             <p className="text-gray-700 leading-relaxed">
