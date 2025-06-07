@@ -109,7 +109,7 @@ const ContactForm = () => {
   
     const InputField = ({ type, name, icon, placeholder, value, multiline = false, required = false }) => (
         <div className={`mb-6 relative group ${focused === name ? 'focused' : ''}`}>
-            <div className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 group-hover:shadow-md">
+            <div className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm border transition-all duration-300 group-hover:shadow-md">
                 <div 
                     className={`
                         flex items-center justify-center p-3 text-gray-400
@@ -167,7 +167,7 @@ const ContactForm = () => {
             
             <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
                 <div className="text-center mb-12">
-                    <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-lavender-deep to-rose-deep bg-clip-text text-transparent">
+                    <h2 className="text-5xl text-lilac font-bold mb-6 bg-gradient-to-r from-lavender-deep to-rose-deep bg-clip-text text-transparent">
                         Get In Touch
                     </h2>
                     <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -194,7 +194,8 @@ const ContactForm = () => {
                     </div>
                     
                     {/* Contact Form */}
-                    <div className="md:col-span-3 bg-white relative flex flex-col items-center bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 group-hover:shadow-md">
+                   <div className="md:col-span-3 bg-white relative flex flex-col items-center rounded-2xl shadow-lg overflow-hidden transition-all duration-300">
+
                         <div className="absolute top-0 right-0  bg-lavender-light rounded-bl-full -z-10 opacity-50" />
                         <div className="absolute bottom-0 left-0 bg-rose-light rounded-tr-full -z-10 opacity-50" />
                         

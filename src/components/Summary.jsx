@@ -25,7 +25,7 @@ const Summary = () => {
                         <div className="space-y-8">
                      
                             <div className="flex flex-col items-center space-y-4">
-                                <h1 className="text-4xl sm:text-5xl font-bold text-dark-grey">
+                                <h1 className="text-4xl sm:text-5xl font-bold text-lilac ">
                                     <span className="inline-block animate-wave">👋</span> Hi, I'm Ashley
                                 </h1>
                                 <div className="h-1 w-20 bg-lilac rounded-full" />
@@ -33,7 +33,7 @@ const Summary = () => {
 
               
                             <p className="text-xl sm:text-2xl text-dark-grey/90 text-center leading-relaxed">
-                                I'm a Pensacola, Florida-area software developer passionate about creating impactful solutions. 
+                                I'm a Pensacola, Florida-based software developer passionate about creating impactful solutions. 
                                 As a full-stack developer, I specialize in building robust applications that solve real-world problems.
                             </p>
 

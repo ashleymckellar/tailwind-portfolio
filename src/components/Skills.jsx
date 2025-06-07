@@ -91,7 +91,7 @@ const Skills = () => {
         },
         styling: {
             icon: "✨",
-            title: "Styling",
+            title: "Design",
             skills: ["Tailwind CSS", "Bootstrap", "Figma"]
         },
         backend: {
@@ -182,7 +182,7 @@ const Skills = () => {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-lavender-deep to-rose-deep bg-clip-text text-transparent">
+                    <h2 className="text-5xl font-bold mb-6 text-lilac bg-gradient-to-r from-lavender-deep to-rose-deep bg-clip-text text-transparent">
                         Skills & Technologies
                     </h2>
                     <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -221,10 +221,11 @@ const Skills = () => {
                             <div className="space-y-12">
                                 {Object.entries(skillCategories).map(([category, { icon, title, skills }]) => (
                                     <div key={category} className="space-y-6">
-                                        <h3 className="text-2xl font-bold text-gray-800 flex items-center space-x-3 border-b border-gray-200 pb-3">
-                                            <span className="text-2xl">{icon}</span>
-                                            <span>{title}</span>
-                                        </h3>
+                                      <h3 className="text-2xl font-bold text-gray-800 flex justify-center sm:justify-start items-center space-x-3 text-center sm:text-left border-b border-gray-200 pb-3">
+    <span className="text-2xl">{icon}</span>
+    <span>{title}</span>
+</h3>
+
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                             {skills.map((skill, index) => (
                                                 <SkillCard key={skill} skill={skill} index={index} />

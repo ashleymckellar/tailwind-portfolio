@@ -62,7 +62,7 @@ const Projects = () => {
         <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100" id="Projects">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold text-lilac mb-6 relative inline-block">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-lilac mb-6 relative inline-block">
                         A Few Accomplishments
                         <span className="absolute bottom-0 left-0 w-full h-1 bg-lilac opacity-30 rounded"></span>
                     </h2>
