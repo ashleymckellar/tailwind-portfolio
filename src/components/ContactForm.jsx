@@ -36,7 +36,7 @@ const ContactForm = () => {
         const { name, value } = e.target;
         setInputs((prevInputs) => ({ ...prevInputs, [name]: value }));
 
-        // Clear error when user types
+ 
         if (value.trim() !== '') {
             setRequiredFieldError('');
         }
@@ -45,7 +45,7 @@ const ContactForm = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        // Form validation
+ 
         if (isDisabled) {
             if (!inputs.name) {
                 setRequiredFieldError('Name is a required field.');

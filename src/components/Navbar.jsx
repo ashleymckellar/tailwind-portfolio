@@ -4,24 +4,7 @@ import { Link } from 'react-scroll';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    // const [scrolled, setScrolled] = useState(false);
 
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const offset = window.scrollY;
-    //         if (offset > 100) {
-    //             setScrolled(true);
-    //         } else {
-    //             setScrolled(false);
-    //         }
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
 
     return (
         <header className="w-full relative">
